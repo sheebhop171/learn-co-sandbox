@@ -4,7 +4,5 @@ require_relative '../lib/explore_charlotte'
 
 ExploreCharlotte::CLI.new.call 
 
-puts "hello!"
-
 
 
