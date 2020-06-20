@@ -1,6 +1,8 @@
 #!/usr/bin/evn ruby 
 
 require_relative '../lib/explore_charlotte'
+require "bundler/setup"
+require "explore_charlotte"
 
 ExploreCharlotte::CLI.new.call 
 

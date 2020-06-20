@@ -22,7 +22,7 @@ class ExploreCharlotte::CLI
     
     while input != "exit"
     
-    input = gets.strip 
+    input = gets.strip
     
     case input 
       when "1" 
