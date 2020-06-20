@@ -4,19 +4,24 @@ class ExploreCharlotte::Activity
     
   def self.types
     
-    activity_1 = self.new 
-    activity_1.type = "Attractions"
-    activity_1.name = "Nascar"
+    self.scrape_types 
     
-    activity_2 = self.new
-    activity_2.type = "Outdoors and Adventure"
-    activity_2.name = "White Water Center"
-    
-    activity_3 = self.new
-    activity_3.type = "Restaurants"
-    activity_3.name = "Kindred"
-    
-   [activity_1, activity_2, activity_3]
   end 
+  
+  def self.scrape_types
+    
+    activites = []
+    
+    activities << self.scrape_cga
+    
+    activities
+  end
+  
+  def self.scrape_cga
+
+    doc = Nokogiri::HTML(open("https://www.charlottesgotalot.com/eat-drink"))
+    
+
+  end
   
 end 

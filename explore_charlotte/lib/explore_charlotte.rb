@@ -6,6 +6,7 @@ require_relative "explore_charlotte/activity"
 require_relative "explore_charlotte/scraper"
 require 'pry'
 require 'open-uri'
+require 'nokogiri'
 
 
 module ExploreCharlotte
