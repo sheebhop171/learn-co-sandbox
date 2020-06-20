@@ -1,8 +1,7 @@
 #My CLI Controller - responsible for business logic and user interactions
 
 class ExploreCharlotte::CLI
-  
-  attr_accessor :name
+
   
   def call
     
@@ -17,7 +16,7 @@ class ExploreCharlotte::CLI
     
     @activities = ExploreCharlotte::Activity.types
     @activities.each.with_index(1) do |activity, i|
-      puts "#{i}. #{activity.name}"
+      puts "#{i}. #{activity.type}"
     end 
   end
   
@@ -30,7 +29,7 @@ class ExploreCharlotte::CLI
     
     if input.to_i > 0
       the_activity = @activities[input.to_i-1]
-      put "#{i}. #{the_activity.name}"
+      puts "#{the_activity.type}"
     elsif input == "activities"
       list_activity_categories
     else
