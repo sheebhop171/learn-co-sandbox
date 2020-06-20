@@ -18,7 +18,7 @@ class ExploreCharlotte::CLI
     
     @activities = ExploreCharlotte::Activity.types
     @activities.each.with_index(1) do |activity, i|
-      puts "#{i}. #{activity.type}"
+     # puts "#{i}. #{activity.type}"
     end 
   end
   
