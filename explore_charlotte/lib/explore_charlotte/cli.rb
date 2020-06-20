@@ -3,6 +3,7 @@
 class ExploreCharlotte::CLI
   
   def call
+    
     puts "Welcome to Charlotte! Let’s explore some featured activities based on your interests."
     list_activity_categories
     get_activities
@@ -10,12 +11,8 @@ class ExploreCharlotte::CLI
   end 
   
   def list_activity_categories
-    puts "What type of activity are you looking to explore?"
-    puts "1. Attractions" 
-    puts "2. Outdoors & Adventure"
-    puts "3. Golf"
-    puts "4. Craft Beer"
-    puts "5. Restaurants"
+    
+    @activities = ExploreCharlotte::Activity.types
   end
   
   def get_activities
