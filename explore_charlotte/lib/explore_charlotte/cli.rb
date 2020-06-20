@@ -13,31 +13,25 @@ class ExploreCharlotte::CLI
   def list_activity_categories
     
     @activities = ExploreCharlotte::Activity.types
+    @activities.each.with_index(1) do |activity, i|
+      puts "#{i}. #{activity.name}"
+    end 
   end
   
   def get_activities
-    puts "Enter the number of the activity you'd like to explore further. You can also enter 'activities' to start over or enter 'exit' to leave the program."
     
     input = nil
     
     while input != "exit"
+    puts "Enter the number of the activity you'd like to explore further. You can also enter 'activities' to start over or enter 'exit' to leave the program."
     
     input = gets.strip
     
-    case input 
-      when "1" 
-        puts "Nascar Hall of Fame"
-      when "2"
-        puts "Whitewater Center"
-      when "3" 
-        puts "The Learning Center"
-      when "4"
-        puts "Birdson Brewing"
-      when "5"
-        puts "Superica"
-      when "activities"
-        list_activity_categories
-      else
+    if input.to_i > 0 
+      puts @activities[input.to_i-1]
+    elsif input == "activities"
+      list_activity_categories
+    else
         puts "Please enter a valid option. You can either enter 'activities' or 'exit'."
       end 
     end
