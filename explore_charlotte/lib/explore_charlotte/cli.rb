@@ -2,6 +2,8 @@
 
 class ExploreCharlotte::CLI
   
+  attr_accessor :name
+  
   def call
     
     puts "Welcome to Charlotte! Let’s explore some featured activities based on your interests."
@@ -27,7 +29,8 @@ class ExploreCharlotte::CLI
     input = gets.strip
     
     if input.to_i > 0
-      puts @activities[input.to_i-1]
+      the_activity = @activities[input.to_i-1]
+      put "#{i}. #{the_activity.name}"
     elsif input == "activities"
       list_activity_categories
     else
