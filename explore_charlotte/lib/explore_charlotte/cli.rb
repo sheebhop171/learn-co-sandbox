@@ -19,7 +19,7 @@ class ExploreCharlotte::CLI
   end
   
   def get_activities
-    puts "Enter the number of the activity you'd like to explore further or else enter 'exit'."
+    puts "Enter the number of the activity you'd like to explore further. You can also enter 'activities' to start over or enter 'exit' to leave the program."
     
     input = nil
     
@@ -38,6 +38,10 @@ class ExploreCharlotte::CLI
         puts "Birdson Brewing"
       when "5"
         puts "Superica"
+      when "activities"
+        list_activity_categories
+      else
+        puts "Please enter a valid option. You can either enter 'activities' or 'exit'."
       end 
     end
   end
