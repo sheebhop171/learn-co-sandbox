@@ -7,5 +7,5 @@ require_relative '../lib/explore_charlotte/activity'
 require_relative '../lib/explore_charlotte/scraper'
 
 require 'pry'
-require 'open-uri'
 require 'nokogiri'
+require 'open-uri'
