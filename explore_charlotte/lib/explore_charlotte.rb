@@ -1,6 +1,6 @@
 module ExploreCharlotte
-  class Error < StandardError; end
-  # Your code goes here...
+  class Error < StandardError; 
+  end
 end
 
 require_relative '../config/environment'
