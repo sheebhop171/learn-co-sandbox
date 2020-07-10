@@ -1,3 +1,5 @@
+equire_relative '../config/environment'
+
 require "bundler/setup"
 require "explore_charlotte"
 require_relative "explore_charlotte/version"
