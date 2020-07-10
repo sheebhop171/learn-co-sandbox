@@ -20,10 +20,8 @@ class ExploreCharlotte::Activity
   def self.scrape_cga
 
     doc = Nokogiri::HTML(open("https://www.charlottesgotalot.com/eat-drink"))
-   #binding.pry
-    
-    unique_type = doc.search(".Card-type").text.strip.uniq
-    name = doc.search(".Card-title").text.strip
+   binding.pry
+    cards = doc.css(".CardGrid CardGrid--col3")
 
   end
   
